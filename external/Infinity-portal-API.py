@@ -38,6 +38,13 @@ def login():
 
   print(token)
 
+def tenant():
+
+  headers = {
+    'Content-type': 'application/json',
+    'Authorizaton': f'Berer {token}'
+  }
+
 def main():
   login()
 
