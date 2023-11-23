@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# use this for consisent results (python dependencies)
+# use this for consistent results (python dependencies)
 pipx install --include-deps ansible
 ansible-galaxy collection install check_point.mgmt
 
