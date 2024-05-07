@@ -22,7 +22,7 @@ provider "azurerm" {
 
 //********************** Basic Configuration **************************//
 module "common" {
-  source                 = "../modules/common"
+  source                 = "../modules/azure/common"
   resource_group_name    = var.resource_group_name
   location               = var.location
   admin_password         = var.admin_password
@@ -42,7 +42,7 @@ module "common" {
 
 //********************** Networking **************************//
 module "vnet" {
-  source              = "../modules/vnet"
+  source              = "../modules/azure/vnet"
   vnet_name           = var.vnet_name
   resource_group_name = module.common.resource_group_name
   location            = module.common.resource_group_location
